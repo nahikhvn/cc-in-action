@@ -72,7 +72,7 @@ Run `npx prisma studio` to inspect data.
 
 ## Testing
 
-Tests live in `__tests__/` directories colocated with source files. Uses Vitest + jsdom + React Testing Library. Key test areas:
+Tests live in `__tests__/` directories colocated with source files. Uses Vitest + jsdom + React Testing Library. Vitest config is at `vitest.config.mts`. Key test areas:
 
 - `src/lib/__tests__/file-system.test.ts` — VFS core logic
 - `src/lib/transform/__tests__/jsx-transformer.test.ts` — Babel transform
