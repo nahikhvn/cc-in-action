@@ -32,8 +32,14 @@ jobs:
 
       - name: Project Setup
         run: |
-          npm run setup
-          npm run dev:daemon
+          npm ci
+          npx prisma generate
+          npx prisma migrate deploy
+
+      - name: Start Dev Server
+        run: npm run dev:daemon
+        env:
+          DATABASE_URL: "file:./prisma/dev.db"
 
       - name: Run Claude Code
         id: claude
